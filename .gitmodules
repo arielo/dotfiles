@@ -1,0 +1,15 @@
+[submodule "config/oh-my-zsh"]
+	path = config/oh-my-zsh
+	url = git@github.com:robbyrussell/oh-my-zsh.git
+[submodule "config/tmux/plugins/tpm"]
+	path = config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "config/spacemacs"]
+	path = config/spacemacs
+	url = https://github.com/arielo/spacemacs_module_for_doom.git
+[submodule "config/tmux/plugins/nord-tmux"]
+	path = config/tmux/plugins/nord-tmux
+	url = https://git::@github.com/arcticicestudio/nord-tmux
+[submodule "config/iterm2-theme"]
+	path = config/iterm2-theme
+	url = https://github.com/arcticicestudio/nord-iterm2.git

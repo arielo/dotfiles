@@ -1,0 +1,83 @@
+[init]
+	templatedir = ~/.git-templates
+
+[core]
+	autocrlf = input
+	safecrlf = false
+	excludesfile = ~/.gitignore
+	editor = emacs -nw
+	compression = 0
+
+[push]
+	default = current
+
+[color]
+	ui = auto
+
+[branch]
+	autosetuprebase = always
+
+[branch "master"]
+	rebase = true
+
+[branch "develop"]
+	rebase = true
+
+[rebase]
+	autoStash = true
+
+[pull]
+	rebase = true
+
+[alias]
+	# Most Frequently Used
+	a = add
+	aa = !git add -u && git add . && git status
+	ca = commit --amend
+	cleanup = !git remote prune origin && git gc && git clean -dfx -e .rvmrc -e Carthage -e .idea -e .mypy_cache -e .pytest_cache -e .virtualenv -e .env.docker -e TODOs.org -e todo.org && git stash clear
+	co = checkout
+	st = status
+	graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+	# Not really
+	ap = add --patch
+	c = commit -m
+	ca = commit --amend -C HEAD
+	ci = commit
+	ci = commit -v
+	cob = checkout -b
+	who = shortlog -n -s --no-merges
+
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+
+[merge]
+	tool = ediff
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+
+# Used for User config
+# ---
+# [user]
+# 	name  = XXXXX
+# 	email = XXXXX
+# 	signingkey = XXXXX
+# [github]
+# 	user = XXXXX
+# 	oauth-token = XXXXX
+# [commit]
+# 	gpgsign = true
+# ---
+
+[includeIf "gitdir:~/git/"]
+	path = ~/git/.gitconfig
+
+[includeIf "gitdir:/git/"]
+	path = /git/.gitconfig
+
+[includeIf "gitdir:~/code/"]
+	path = ~/code/.gitconfig
