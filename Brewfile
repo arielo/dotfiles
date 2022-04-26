@@ -5,7 +5,7 @@ brew "awscli"
 brew "buildpacks/tap/pack"
 brew "cmake"
 brew "coreutils"
-brew "d12frosted/emacs-plus/emacs-plus@27", args: ["with-dbus", "with-mailutils", "with-imagemagick", "with-modern-black-dragon-icon"], restart_service: :changed
+brew "d12frosted/emacs-plus/emacs-plus@29", args: ["with-dbus", "with-mailutils", "with-imagemagick", "with-modern-black-dragon-icon"], restart_service: :changed
 brew "earthly/earthly/earthly"
 brew "editorconfig"
 brew "fd"
@@ -62,3 +62,4 @@ cask "iterm2"
 cask "keybase"
 cask "moom"
 brew "pgformatter"
+brew "proselint"

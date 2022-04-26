@@ -76,8 +76,13 @@
 [includeIf "gitdir:~/git/"]
 	path = ~/git/.gitconfig
 
+[includeIf "gitdir:~/.emacs.d/"]
+	path = ~/git/.gitconfig
+
 [includeIf "gitdir:/git/"]
 	path = /git/.gitconfig
 
 [includeIf "gitdir:~/code/"]
 	path = ~/code/.gitconfig
+[gitlab "gitlab.seatgeekadmin.com/api/v4"]
+	user = azavala

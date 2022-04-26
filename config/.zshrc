@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -90,7 +92,7 @@ export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 export PATH="/opt/homebrew/opt/qt@5/bin:$PATH"
 export PATH="$HOME/git/dotfiles/bin:$PATH"
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-
+export PATH="/opt/homebrew/opt/mysql-client@5.7/bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
@@ -113,3 +115,10 @@ export HOMEBREW_GITHUB_API_TOKEN=$(sec get HOMEBREW_GITHUB_API_TOKEN)
 export GITHUB_ACCESS_TOKEN=$(sec get GITHUB_ACCESS_TOKEN)
 export OKTA_USERNAME=$(sec get OKTA_USERNAME)
 export GITLAB_PERSONAL_TOKEN=$(sec get GITLAB_PERSONAL_TOKEN)
+
+alias rg="rg --no-ignore"
+
+autoload -U compinit; compinit
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

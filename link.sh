@@ -24,10 +24,6 @@ echo "Doom Emacs config..."
 rm ~/.doom.d
 ln -sfvF $DOTFILES_PATH/config/doom.d ~/.doom.d
 
-mkdir -p ~/.emacs.d/modules/private
-rm ~/.emacs.d/modules/private/spacemacs
-ln -sfvF $DOTFILES_PATH/config/spacemacs ~/.emacs.d/modules/private/spacemacs
-
 echo "ASDF Global config"
 ln -sfvF $DOTFILES_PATH/config/.tool-versions ~/.tool-versions
 
